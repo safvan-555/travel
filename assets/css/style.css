@@ -281,6 +281,34 @@ h6 {
     font-size: 32px;
   }
 }
+
+
+.overlay-travel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.loader-travel {
+  border: 8px solid #f3f3f3; 
+  border-top: 8px solid var(--theme-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spinTrvel 1s linear infinite;
+}
+@keyframes spinTrvel {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 p.has-drop-cap {
   margin-bottom: 20px;
 }
@@ -2118,6 +2146,26 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   -webkit-transform: rotateY(-90deg);
   transform: rotateY(-90deg);
 }
+
+
+.th-preloader .animation-preloader .txt-loading .characters1 {
+  color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.th-preloader .animation-preloader .txt-loading .characters1:before {
+  -webkit-animation: characters 4s infinite;
+  animation: characters 4s infinite;
+  color: var(--primary-color);
+  content: attr(preloader-text);
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+}
+
+
 .th-preloader
   .animation-preloader
   .txt-loading
